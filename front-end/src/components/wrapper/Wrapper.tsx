@@ -6,8 +6,7 @@ export default function Wrapper() {
   return (
     <>
       <Header />
-      {/* <div style={{margin: "96px"}}></div> */}
-      fdsfs
+      <div style={{margin: "96px"}}></div>
       <Outlet />
       <Footer />
     </>

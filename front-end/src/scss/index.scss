@@ -1,9 +1,11 @@
 @import "./consts";
 @import "./header";
 @import "./footer";
+@import "./items";
 
 body {
     margin: 0;
     padding: 0;
     background: $whiteish;
+    overflow-x: hidden;
 }
