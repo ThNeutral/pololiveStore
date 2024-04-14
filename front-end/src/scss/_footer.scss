@@ -1,0 +1,122 @@
+.footer {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  background-color: $footerColor;
+
+  &-icons {
+    position: absolute;
+    width: 307px;
+    height: 48px;
+    left: 942px;
+    top: 710px;
+
+    display: flex;
+    align-items: center;
+
+    &-visa {
+      position: relative;
+      width: 48px;
+      height: 48px;
+    }
+
+    &-jcb {
+      position: relative;
+      width: 48px;
+      height: 48px;
+    }
+
+    &-googlePay {
+      position: relative;
+      margin: 12px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &-amazon {
+      position: relative;
+      width: 48px;
+      height: 48px;
+    }
+
+    &-amexp {
+      position: relative;
+      margin: 8px;
+      width: 32px;
+      height: 32px;
+    }
+
+    &-mastercard {
+      position: relative;
+      margin: 12px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &-paypal {
+      position: relative;
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &-label {
+    position: absolute;
+    width: 510px;
+    height: 19px;
+    left: 78px;
+    top: 724px;
+
+    font-family: "JejuGothic";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 36px;
+
+    color: #a9a9a9;
+
+    &-information {
+      position: absolute;
+      width: 710px;
+      height: 304px;
+      left: 100px;
+      top: 72px;
+    }
+
+    &-sns1 {
+      position: absolute;
+      width: 710px;
+      height: 184px;
+      left: 101px;
+      top: 456px;
+    }
+
+    &-sns2 {
+      position: absolute;
+      width: 473.25px;
+      height: 256px;
+      left: 956.75px;
+      top: 96px;
+    }
+
+    &-link {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 24px;
+
+      color: #c6c6c6;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    &-link:hover {
+      color: #eee;
+    }
+
+    &-header {
+      color: #ffffff;
+    }
+  }
+}

@@ -1,6 +1,9 @@
-@import "./header.scss";
+@import "./consts";
+@import "./header";
+@import "./footer";
 
 body {
     margin: 0;
     padding: 0;
+    background: $whiteish;
 }
