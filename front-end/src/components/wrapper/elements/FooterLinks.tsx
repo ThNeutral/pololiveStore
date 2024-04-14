@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 import { FooterLinkType } from "../Footer";
 import { useNavigate } from "react-router-dom";
 
@@ -20,6 +21,7 @@ export function FooterLinks(props: FooterLinkProps) {
       {props.links.map((link) => {
         return (
           <div
+            key={uuidv4()}
             className="footer-label-link"
             onClick={() => linkClickHandler(link.link)}
           >
