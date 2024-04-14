@@ -1,0 +1,158 @@
+.divider {
+  position: relative;
+  height: 200px;
+  left: 0px;
+  top: -38px;
+
+  display: flex;
+  justify-content: center;
+
+  &-banner {
+    position: absolute;
+    height: 120px;
+    top: 31px;
+
+    display: flex;
+    justify-content: center;
+
+    /* 新 参 者 NEW ARRIVAL */
+    &-text {
+      position: absolute;
+      width: 296px;
+      height: 100px;
+      top: 27px;
+
+      &-en {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 24px;
+        text-align: center;
+
+        color: #8c649e;
+      }
+
+      &-jp {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 24px;
+        /* or 67% */
+        text-align: center;
+
+        color: #ffd700;
+      }
+    }
+
+    &-decorGold-top {
+      position: absolute;
+      width: 30px;
+      height: 39.45px;
+      left: 200px;
+      top: 50px;
+
+      transform: rotate(149.19deg);
+    }
+
+    &-decorPurple-top {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      left: -200px;
+      top: 51px;
+    }
+
+    &-decorGold-bottom {
+      position: absolute;
+      width: 30px;
+      height: 39.45px;
+      left: -210px;
+      top: 120px;
+
+      transform: rotate(27.63deg);
+    }
+
+    &-decorPurple-bottom {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      left: 190px;
+      top: 125px;
+    }
+  }
+  &-lines-right {
+    position: absolute;
+    width: 515px;
+    height: 24px;
+    left: 290px;
+    top: 88px;
+  }
+
+  &-lines-left {
+    position: absolute;
+    width: 515px;
+    height: 24px;
+    left: -780px;
+    top: 88px;
+  }
+}
+
+.itemsGrid {
+  display: flex;
+  justify-content: center;
+  &-item {
+    margin: 25px;
+
+    &-cost,
+    &-name {
+      width: 256px;
+
+      font-family: "Itim";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+
+      text-wrap: wrap;
+    }
+
+    &-cost {
+      color: #d62828;
+    }
+
+    &-name {
+      color: #4d4d4d;
+    }
+
+    &-image {
+      width: 256px;
+      height: 256px;
+
+      box-shadow: 15px 15px #8c649e;
+    }
+  }
+}
+
+.view-all-button {
+  position: absolute;
+  width: 240px;
+  right: 150px;
+  z-index: -1;
+
+  &-text {
+    position: absolute;
+    font-family: "Itim";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    
+    margin-top: 12px;
+    right: 225px;
+
+    color: #ffffff;
+  }
+}

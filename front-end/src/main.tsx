@@ -3,12 +3,18 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Wrapper from "./components/wrapper/Wrapper";
 import "./scss/index.scss"
+import { HomePage } from "./components/homePage/HomePage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Wrapper />,
-    children: []
+    children: [
+      {
+        path: "/",
+        element: <HomePage />
+      }
+    ]
   }
 ])
 
