@@ -11,6 +11,8 @@
     height: 80px;
     left: 0px;
     top: 8px;
+
+    cursor: pointer;
   }
 
   &-text {
@@ -19,6 +21,8 @@
     height: 64px;
     left: 86px;
     top: 16px;
+
+    cursor: pointer;
 
     font-family: "Itim";
     font-style: normal;
@@ -128,6 +132,9 @@
       height: 48px;
       left: 90px;
       top: 8px;
+
+      cursor: pointer;
+      z-index: 2;
     }
   }
 }
