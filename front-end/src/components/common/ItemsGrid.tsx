@@ -1,3 +1,4 @@
+import { v4 } from "uuid";
 import { ItemType } from "../homePage/HomePage";
 import { Item } from "./Item";
 
@@ -9,7 +10,7 @@ export function ItemsGrid(props: ItemsGridProps) {
   return (
     <div className="itemsGrid">
       {props.items.map((item) => {
-        return <Item item={item} />;
+        return <Item key={v4()} item={item} />;
       })}
     </div>
   );
