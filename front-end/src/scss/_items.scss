@@ -133,15 +133,58 @@
       box-shadow: 15px 15px #8c649e;
     }
   }
+
+  &-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-navigation {
+      margin: 0 20px;
+      width: 48px;
+      height: 48px;
+      border: solid 1px #e8e8e8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+
+      box-shadow: 0px 4px 4px 0px #00000040;
+
+      cursor: pointer;
+
+      &-left,
+      &-right {
+        width: 20px;
+        height: 22.63px;
+      }
+
+      &-right {
+      }
+
+      &-left {
+        transform: rotate(-180deg);
+      }
+
+      &-disabled {
+        cursor: auto;
+        filter: brightness(50%);
+      }
+    }
+  }
 }
 
 .view-all-button {
   position: absolute;
   width: 240px;
   right: 150px;
-  z-index: -1;
+  z-index: 1;
+
+  cursor: pointer;
 
   &-text {
+    z-index: 2;
+    cursor: pointer;
     position: absolute;
     font-family: "Itim";
     font-style: normal;
@@ -149,7 +192,7 @@
     font-size: 24px;
     line-height: 32px;
     text-align: center;
-    
+
     margin-top: 12px;
     right: 225px;
 

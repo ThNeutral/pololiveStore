@@ -8,6 +8,7 @@ import AppRoutes from "./helpers/routes";
 import LoginPage from "./components/authPages/LoginPage";
 import { RegisterPage } from "./components/authPages/RegisterPage";
 import AccountPage from "./components/accountPage/AccountPage";
+import ProductsPage from "./components/productsPage/ProductsPage";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: AppRoutes.accountRoute,
         element: <AccountPage />
+      },
+      {
+        path: AppRoutes.productsRoute,
+        element: <ProductsPage />
       }
     ],
   },
