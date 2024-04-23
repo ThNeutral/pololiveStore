@@ -102,6 +102,8 @@
 .itemsGrid {
   display: flex;
   justify-content: center;
+  cursor: pointer;
+
   &-item {
     margin: 25px;
 
