@@ -5,6 +5,7 @@ import mastercardIcon from "../../assets/Footer/mastercard(1).png";
 import amExpIcon from "../../assets/Footer/payment.png";
 import payPalIcon from "../../assets/Footer/paypal.png";
 import visaIcon from "../../assets/Footer/visa.png";
+import AppRoutes from "../../helpers/routes";
 import { FooterLinks } from "./elements/FooterLinks";
 
 const strings = {
@@ -25,27 +26,27 @@ const information: LinkAndHeaderType = {
   header: "Information",
   links: [
     {
-      link: "/null",
+      link: AppRoutes.todoRoute,
       name: "Legal Information and Notices required by the Act on Specified Commercial Transactions",
     },
     {
-      link: "/null",
+      link: AppRoutes.todoRoute,
       name: "EC Site Privacy Policy",
     },
     {
-      link: "/null",
+      link: AppRoutes.todoRoute,
       name: "Terms of Use",
     },
     {
-      link: "/null",
+      link: AppRoutes.todoRoute,
       name: "Privacy Policy for US Residents",
     },
     {
-      link: "/null",
+      link: AppRoutes.todoRoute,
       name: "Q&A",
     },
     {
-      link: "/null",
+      link: AppRoutes.todoRoute,
       name: "International Delivery",
     },
   ],
@@ -55,11 +56,11 @@ const sns1: LinkAndHeaderType = {
   header: "SNS",
   links: [
     {
-      link: "/null",
+      link: AppRoutes.todoRoute,
       name: "https://twitter.com/pololivetv",
     },
     {
-      link: "/null",
+      link: AppRoutes.todoRoute,
       name: "https://www.youtube.com/channel/pololiveYT",
     },
   ],
@@ -68,13 +69,13 @@ const sns1: LinkAndHeaderType = {
 const sns2: LinkAndHeaderType = {
   header: "SNS",
   links: [
-    { link: "/null", name: "COVER Corporation official website" },
+    { link: AppRoutes.todoRoute, name: "COVER Corporation official website" },
     {
-      link: "/null",
+      link: AppRoutes.todoRoute,
       name: "pololive production official website",
     },
-    { link: "/null", name: "pololive official website" },
-    { link: "/null", name: "POLOSTARS official website" },
+    { link: AppRoutes.todoRoute, name: "pololive official website" },
+    { link: AppRoutes.todoRoute, name: "POLOSTARS official website" },
   ],
 };
 
