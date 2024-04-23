@@ -49,6 +49,7 @@ export function HomePage() {
         jpstring={strings.regular.jp}
         items={dummyItemSet}
       />
+      <div style={{height: "100px"}}></div>
     </div>
   );
 }
