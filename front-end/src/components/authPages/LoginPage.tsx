@@ -1,15 +1,19 @@
 import { useState } from "react";
 import hideIcon from "../../assets/AuthPage/hide.svg";
 import { useNavigate } from "react-router-dom";
-import { registerRoute } from "../../helpers/routes";
+import AppRoutes from "../../helpers/routes";
 
 export default function LoginPage() {
   const [isPasswordHidden, setIsPasswordHidden] = useState(true);
   const navigate = useNavigate();
 
+  function handleFormSubmit(e: React.FormEvent<HTMLFormElement>) {
+    navigate(AppRoutes.accountRoute)
+  }
+
   return (
     <div className="form">
-      <form className="form-form">
+      <form className="form-form" onSubmit={(e) => handleFormSubmit(e)}>
         <h3 className="form-form-header">Hi, Welcome!</h3>
         <input
           name="text"
@@ -31,7 +35,7 @@ export default function LoginPage() {
           />
           <p
             className="form-form-input-forgotPassword"
-            onClick={() => navigate("/null")}
+            onClick={() => navigate(AppRoutes.todoRoute)}
           >
             Forgot password?
           </p>
@@ -43,7 +47,7 @@ export default function LoginPage() {
           Don`t have an account?{" "}
           <span
             className="form-form-createAccount-link"
-            onClick={() => navigate(registerRoute)}
+            onClick={() => navigate(AppRoutes.registerRoute)}
           >
             Create one!
           </span>

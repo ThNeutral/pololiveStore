@@ -1,4 +1,3 @@
-import { ItemsGrid } from "../common/ItemsGrid";
 import thumbnail from "../../assets/DummyItems/holoIdThumbnail.png";
 import { ItemsBlock } from "../common/ItemsBlock";
 

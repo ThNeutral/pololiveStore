@@ -4,7 +4,7 @@ import userIcon from "../../assets/Header/UsrIcon.png";
 import cartIcon from "../../assets/Header/Cart_icon.png";
 import langIcon from "../../assets/Header/LangSwitchIcon.png";
 import { useNavigate } from "react-router-dom";
-import { homeRoute, loginRoute } from "../../helpers/routes";
+import AppRoutes from "../../helpers/routes";
 
 const strings = {
   en: {
@@ -18,11 +18,11 @@ export default function Header() {
   const navigate = useNavigate();
 
   function logoClickHandler() {
-    navigate(homeRoute);
+    navigate(AppRoutes.homeRoute);
   }
 
   function userIconClickHandler() {
-    navigate(loginRoute);
+    navigate(AppRoutes.loginRoute);
   }
 
   return (

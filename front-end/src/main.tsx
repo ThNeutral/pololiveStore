@@ -4,27 +4,32 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Wrapper from "./components/wrapper/Wrapper";
 import "./scss/index.scss";
 import { HomePage } from "./components/homePage/HomePage";
-import { homeRoute, loginRoute, registerRoute } from "./helpers/routes";
+import AppRoutes from "./helpers/routes";
 import LoginPage from "./components/authPages/LoginPage";
 import { RegisterPage } from "./components/authPages/RegisterPage";
+import AccountPage from "./components/accountPage/AccountPage";
 
 const router = createBrowserRouter([
   {
-    path: homeRoute,
+    path: AppRoutes.homeRoute,
     element: <Wrapper />,
     children: [
       {
-        path: homeRoute,
+        path: AppRoutes.homeRoute,
         element: <HomePage />,
       },
       {
-        path: loginRoute,
+        path: AppRoutes.loginRoute,
         element: <LoginPage />,
       },
       {
-        path: registerRoute,
+        path: AppRoutes.registerRoute,
         element: <RegisterPage />,
       },
+      {
+        path: AppRoutes.accountRoute,
+        element: <AccountPage />
+      }
     ],
   },
 ]);

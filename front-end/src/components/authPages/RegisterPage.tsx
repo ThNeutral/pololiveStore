@@ -1,15 +1,20 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import hideIcon from "../../assets/AuthPage/hide.svg";
+import AppRoutes from "../../helpers/routes";
 
 export function RegisterPage() {
   const [isPasswordHidden, setIsPasswordHidden] = useState(true);
   const [isConfirmPasswordHidden, setIsConfirmPasswordHidden] = useState(true);
   const navigate = useNavigate();
 
+  function handleFormSubmit(e: React.FormEvent<HTMLFormElement>) {
+    navigate(AppRoutes.accountRoute)
+  }
+
   return (
     <div className="form">
-      <form className="form-form">
+      <form className="form-form" onSubmit={(e) => handleFormSubmit(e)}>
         <h3 className="form-form-header">Create account</h3>
         <p>Please create an account with your dealer email address.</p>
         <input
