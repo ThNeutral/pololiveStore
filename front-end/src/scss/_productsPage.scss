@@ -1,0 +1,64 @@
+.merchList {
+  display: flex;
+  justify-content: center;
+
+  &-categories {
+    &-header,
+    &-text {
+      width: 200px;
+      border-bottom: solid 1px #ffd700;
+    }
+
+    &-text {
+      font-family: Itim;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    &-category {
+      display: flex;
+      font-family: Itim;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+    }
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: column;
+
+    &-div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: relative;
+
+      &-yellowButton {
+        width: 750px;
+        height: 105px;
+        z-index: 2;
+
+        cursor: pointer;
+
+        &-text {
+            position: absolute;
+          z-index: 1;
+
+          font-family: Itim;
+          font-size: 32px;
+          font-weight: 400;
+          line-height: 25px;
+          text-align: center;
+
+          color: #FFD700;
+        }
+      }
+    }
+  }
+}
