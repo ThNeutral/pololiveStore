@@ -48,6 +48,40 @@ $costcolor: #d62828;
     flex-direction: column;
     justify-content: space-between;
 
+    &-message {
+      font-family: Inter;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: right;
+
+      color: #4d4d4d;
+      margin-top: 0;
+    }
+
+    &-button {
+      position: relative;
+      background-color: #d62828;
+      width: 160px;
+      height: 40px;
+      color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: Itim;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(80%);
+      }
+    }
+
     &-text {
       width: 100%;
       display: flex;
@@ -98,6 +132,11 @@ $costcolor: #d62828;
         }
       }
 
+      &-center {
+        display: flex;
+        align-items: center;
+      }
+
       &-right {
         display: flex;
         align-items: center;
@@ -106,13 +145,16 @@ $costcolor: #d62828;
     }
 
     &-overallPrice {
-        font-family: Itim;
-        font-size: 20px;
-        font-weight: 400;
+      font-family: Itim;
+      font-size: 20px;
+      font-weight: 400;
 
-        text-align: right;
-        color: $costcolor;
-        margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+      color: $costcolor;
+      margin-bottom: 50px;
     }
   }
 }

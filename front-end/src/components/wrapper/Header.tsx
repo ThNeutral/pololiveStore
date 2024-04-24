@@ -25,6 +25,10 @@ export default function Header() {
     navigate(AppRoutes.loginRoute);
   }
 
+  function cartIconClickHandler() {
+    navigate(AppRoutes.cartRoute);
+  }
+
   return (
     <div className="header">
       <img
@@ -38,7 +42,11 @@ export default function Header() {
       </div>
       <div>
         <div className="header-search">
-          <input className="header-search-input" type="text" placeholder="Search..."/>
+          <input
+            className="header-search-input"
+            type="text"
+            placeholder="Search..."
+          />
           <img className="header-search-icon" src={magniGlassIcon} />
         </div>
       </div>
@@ -50,7 +58,11 @@ export default function Header() {
           src={userIcon}
           onClick={userIconClickHandler}
         />
-        <img className="header-icons-cart" src={cartIcon} />
+        <img
+          className="header-icons-cart"
+          src={cartIcon}
+          onClick={cartIconClickHandler}
+        />
       </div>
     </div>
   );
