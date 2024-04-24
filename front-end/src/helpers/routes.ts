@@ -1,11 +1,17 @@
 export default class AppRoutes {
-    static homeRoute = "/";
-    static loginRoute = "/login";
-    static registerRoute = "/register";
-    static accountRoute = "/account"; 
-    static productsRoute = "/products";
-    static productRoute = "/product";
-    static cartRoute = "/cart";
+  static rootRoute = "/";
 
-    static todoRoute = "/null";
+  static homeRoute = "/shop";
+  static loginRoute = this.homeRoute + "/login";
+  static registerRoute = this.homeRoute + "/register";
+  static accountRoute = this.homeRoute + "/account";
+  static productsRoute = this.homeRoute + "/products";
+  static productRoute = this.homeRoute + "/product";
+  static cartRoute = this.homeRoute + "/cart";
+
+  static todoRoute = this.homeRoute + "/null";
+
+  static payRoute = "/payment";
+  static informationRoute = this.payRoute + "/information";
+  static paymentRoute = this.payRoute + "/information";
 }

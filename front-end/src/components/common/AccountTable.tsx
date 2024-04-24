@@ -1,4 +1,6 @@
+import { useNavigate } from "react-router-dom";
 import { AccountItem, AccountItemType } from "./AccountItem";
+import AppRoutes from "../../helpers/routes";
 
 const strings = {
   products: {
@@ -18,6 +20,8 @@ interface AccountTableProps {
 }
 
 export function AccountTable(props: AccountTableProps) {
+  const navigate = useNavigate();
+
   return (
     <div className="account-cart">
       <div className="account-cart-text">
@@ -31,8 +35,17 @@ export function AccountTable(props: AccountTableProps) {
       {props.isExtended ? <div className="account-cart-line"></div> : null}
       <div className="account-cart-overallPrice">
         <p>{"Overall price~" + props.overallPrice}</p>
-        {props.isExtended ? <p className="account-cart-message">{strings.checkout.message}</p> : null}
-        {props.isExtended ? <div className="account-cart-button">CHECKOUT</div> : null}
+        {props.isExtended ? (
+          <p className="account-cart-message">{strings.checkout.message}</p>
+        ) : null}
+        {props.isExtended ? (
+          <div
+            onClick={() => navigate(AppRoutes.informationRoute)}
+            className="account-cart-button"
+          >
+            CHECKOUT
+          </div>
+        ) : null}
       </div>
     </div>
   );

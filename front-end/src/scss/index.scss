@@ -7,10 +7,11 @@
 @import "./productsPage";
 @import "./product";
 @import "./cart";
+@import "./payment";
 
 body {
-    margin: 0;
-    padding: 0;
-    background: $whiteish;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background: $whiteish;
+  overflow-x: hidden;
 }

@@ -11,8 +11,30 @@ import AccountPage from "./components/accountPage/AccountPage";
 import ProductsPage from "./components/productsPage/ProductsPage";
 import { ProductPage } from "./components/productPage/ProductPage";
 import { CartPage } from "./components/cartPage/CartPage";
+import { RootPage } from "./components/rootPage/RootPage";
+import { PaymentPaymentPage } from "./components/paymentPages/PaymentPaymentPage";
+import { PaymentInformationPage } from "./components/paymentPages/PaymentInformationPage";
+import { PaymentLayout } from "./components/paymentPages/PaymentLayout";
 
 const router = createBrowserRouter([
+  {
+    path: AppRoutes.rootRoute,
+    element: <RootPage />,
+  },
+  {
+    path: AppRoutes.payRoute,
+    element: <PaymentLayout />,
+    children: [
+      {
+        path: AppRoutes.paymentRoute,
+        element: <PaymentPaymentPage />,
+      },
+      {
+        path: AppRoutes.informationRoute,
+        element: <PaymentInformationPage />,
+      },
+    ],
+  },
   {
     path: AppRoutes.homeRoute,
     element: <Wrapper />,
@@ -31,20 +53,20 @@ const router = createBrowserRouter([
       },
       {
         path: AppRoutes.accountRoute,
-        element: <AccountPage />
+        element: <AccountPage />,
       },
       {
         path: AppRoutes.productsRoute,
-        element: <ProductsPage />
-      }, 
+        element: <ProductsPage />,
+      },
       {
         path: AppRoutes.productRoute,
-        element: <ProductPage />
+        element: <ProductPage />,
       },
       {
         path: AppRoutes.cartRoute,
-        element: <CartPage />
-      }
+        element: <CartPage />,
+      },
     ],
   },
 ]);
