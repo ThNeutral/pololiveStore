@@ -5,7 +5,7 @@ import thumbnail from "../../assets/DummyItems/holoIdThumbnail.png";
 import { ItemType } from "../homePage/HomePage";
 import { useState } from "react";
 import yellowOutline from "../../assets/ItemListPage/yellow-outline.png";
-import ItemsGridCarousel from "../common/ItemsGridCarousel";
+import { HistoryGrid } from "../common/HistoryGrid";
 
 const string = {
   merch: {
@@ -81,11 +81,7 @@ export default function ProductsPage() {
           </div>
         </div>
       </div>
-      <ItemsBlockBanner
-        jpstring={string.history.jp}
-        enstring={string.history.en}
-      />
-      <ItemsGridCarousel items={dummyItemSet} size={4}/>
+      <HistoryGrid />
     </>
   );
 }

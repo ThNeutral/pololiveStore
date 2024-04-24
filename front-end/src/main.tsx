@@ -10,6 +10,7 @@ import { RegisterPage } from "./components/authPages/RegisterPage";
 import AccountPage from "./components/accountPage/AccountPage";
 import ProductsPage from "./components/productsPage/ProductsPage";
 import { ProductPage } from "./components/productPage/ProductPage";
+import { CartPage } from "./components/cartPage/CartPage";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: AppRoutes.productRoute,
         element: <ProductPage />
+      },
+      {
+        path: AppRoutes.cartRoute,
+        element: <CartPage />
       }
     ],
   },

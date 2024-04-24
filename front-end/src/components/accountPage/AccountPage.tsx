@@ -2,8 +2,9 @@ import { useNavigate } from "react-router-dom";
 import { ItemsBlockBanner } from "../common/ItemsBlockBanner";
 import AppRoutes from "../../helpers/routes";
 import uproarThumbnail from "../../assets/DummyItems/uproarThumbnail.png";
-import { v4 as v4uuid } from "uuid";
 import { useEffect, useState } from "react";
+import { AccountItemType } from "../common/AccountItem";
+import { AccountTable } from "../common/AccountTable";
 
 const strings = {
   account: {
@@ -15,18 +16,7 @@ const strings = {
     manage: "Manage Personal Info",
     logout: "Log Out",
   },
-  products: {
-    product: "Product",
-    total: "Total",
-  },
 };
-
-interface AccountItemType {
-  image: string;
-  name: string;
-  desc: string;
-  price: number;
-}
 
 const dummyItems: AccountItemType[] = [
   {
@@ -90,40 +80,7 @@ export default function AccountPage() {
           </div>
         </div>
       </div>
-      <div className="account-cart">
-        <div className="account-cart-text">
-          <p>{strings.products.product}</p>
-          <p>{strings.products.total}</p>
-        </div>
-        <div className="account-cart-line"></div>
-        {dummyItems.map((item) => {
-          return (
-            <div id={v4uuid()} className="account-cart-item">
-              <div className="account-cart-item-left">
-                <img
-                  className="account-cart-item-left-image"
-                  src={item.image}
-                />
-                <div className="account-cart-item-left-text">
-                  <p className="account-cart-item-left-text-name">
-                    {item.name}
-                  </p>
-                  <p className="account-cart-item-left-text-desc">
-                    {item.desc}
-                  </p>
-                  <p className="account-cart-item-left-text-price">
-                    {"Cost~" + item.price}
-                  </p>
-                </div>
-              </div>
-              <div className="account-cart-item-right">
-                {"Cost~" + item.price}
-              </div>
-            </div>
-          );
-        })}
-        <div className="account-cart-overallPrice">{"Overall price~" + overallPrice}</div>
-      </div>
+      <AccountTable items={dummyItems} overallPrice={overallPrice} isExtended={false} />
     </>
   );
 }

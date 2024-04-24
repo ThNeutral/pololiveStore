@@ -5,6 +5,7 @@ export default class AppRoutes {
     static accountRoute = "/account"; 
     static productsRoute = "/products";
     static productRoute = "/product";
+    static cartRoute = "/cart";
 
     static todoRoute = "/null";
 }
