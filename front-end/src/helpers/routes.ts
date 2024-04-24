@@ -13,5 +13,5 @@ export default class AppRoutes {
 
   static payRoute = "/payment";
   static informationRoute = this.payRoute + "/information";
-  static paymentRoute = this.payRoute + "/information";
+  static paymentRoute = this.payRoute + "/payment";
 }
