@@ -15,6 +15,8 @@ import { RootPage } from "./components/rootPage/RootPage";
 import { PaymentPaymentPage } from "./components/paymentPages/PaymentPaymentPage";
 import { PaymentInformationPage } from "./components/paymentPages/PaymentInformationPage";
 import { PaymentLayout } from "./components/paymentPages/PaymentLayout";
+import { AdminBar } from "./components/wrapper/AdminBar.";
+import { KeyStatsPage } from "./components/keyStatsPage/KeyStatsPage";
 
 const router = createBrowserRouter([
   {
@@ -66,6 +68,24 @@ const router = createBrowserRouter([
       {
         path: AppRoutes.cartRoute,
         element: <CartPage />,
+      },
+      {
+        path: AppRoutes.adminRoute,
+        element: <AdminBar />,
+        children: [
+          {
+            path: AppRoutes.keyStatsRoute,
+            element: <KeyStatsPage />,
+          },
+          {
+            path: AppRoutes.adminAssignmentRoute,
+            element: <></>,
+          },
+          {
+            path: AppRoutes.itemManagmentRoute,
+            element: <></>,
+          },
+        ],
       },
     ],
   },

@@ -11,6 +11,11 @@ export default class AppRoutes {
 
   static todoRoute = this.homeRoute + "/null";
 
+  static adminRoute = this.homeRoute + "/admin";
+  static keyStatsRoute = this.adminRoute + "/key-stats";
+  static adminAssignmentRoute = this.adminRoute + "/admin-assignment";
+  static itemManagmentRoute = this.adminRoute + "/item-managment";
+
   static payRoute = "/payment";
   static informationRoute = this.payRoute + "/information";
   static paymentRoute = this.payRoute + "/payment";
