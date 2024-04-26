@@ -17,6 +17,11 @@ import { PaymentInformationPage } from "./components/paymentPages/PaymentInforma
 import { PaymentLayout } from "./components/paymentPages/PaymentLayout";
 import { AdminBar } from "./components/wrapper/AdminBar.";
 import { KeyStatsPage } from "./components/keyStatsPage/KeyStatsPage";
+import { GenerateDiscountPage } from "./components/generateDiscountPage/GenerateDiscountPage";
+import { AdminAssignmentPage } from "./components/adminAssignmentPage/AdminAssignmentPage";
+import { ManageAdminPage } from "./components/manageAdminPage/ManageAdminPage";
+import { ItemManagmentPage } from "./components/itemManagmentPage/ItemManagmentPage";
+import { СhangeProductPage } from "./components/productPage/ChangeProductPage";
 
 const router = createBrowserRouter([
   {
@@ -79,11 +84,23 @@ const router = createBrowserRouter([
           },
           {
             path: AppRoutes.adminAssignmentRoute,
-            element: <></>,
+            element: <AdminAssignmentPage />,
           },
           {
             path: AppRoutes.itemManagmentRoute,
-            element: <></>,
+            element: <ItemManagmentPage />,
+          },
+          {
+            path: AppRoutes.discountGenerationRoute,
+            element: <GenerateDiscountPage />,
+          },
+          {
+            path: AppRoutes.manageAdminRoute,
+            element: <ManageAdminPage />,
+          },
+          {
+            path: AppRoutes.changeProductRoute,
+            element: <СhangeProductPage />,
           },
         ],
       },

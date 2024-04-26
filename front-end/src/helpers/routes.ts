@@ -15,6 +15,9 @@ export default class AppRoutes {
   static keyStatsRoute = this.adminRoute + "/key-stats";
   static adminAssignmentRoute = this.adminRoute + "/admin-assignment";
   static itemManagmentRoute = this.adminRoute + "/item-managment";
+  static discountGenerationRoute = this.adminRoute + "/generate-discount";
+  static manageAdminRoute = this.adminRoute + "/manage-admin";
+  static changeProductRoute = this.adminRoute + "/product";
 
   static payRoute = "/payment";
   static informationRoute = this.payRoute + "/information";

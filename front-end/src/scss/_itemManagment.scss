@@ -1,0 +1,91 @@
+.itemManagmentItem {
+  display: flex;
+  flex-direction: column;
+  width: 167px;
+  margin: 10px 20px;
+  margin-top: 50px;
+
+  &-thumbnail {
+    width: 167px;
+    box-shadow: 10px 10px #8c649e;
+  }
+
+  &-text {
+    font-family: Itim;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+
+    color: #4d4d4d;
+    margin: 5px 0;
+    margin-top: 15px;
+  }
+
+  &-costAndLink {
+    display: flex;
+    justify-content: space-between;
+
+    &-cost,
+    &-link {
+      margin: 0;
+      font-family: Itim;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+
+      color: #d62828;
+    }
+
+    &-link {
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover {
+        color: #a60808;
+      }
+    }
+  }
+}
+
+.itemManagmentPage {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+
+  &-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 100px;
+    max-width: 1440px;
+  }
+
+  &-button {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    &-outline {
+      width: 750px;
+      height: 105px;
+    }
+
+    &-text {
+      position: absolute;
+
+      font-family: Itim;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 25px;
+      text-align: center;
+
+      color: #ffd700;
+    }
+  }
+}

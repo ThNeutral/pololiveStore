@@ -1,6 +1,8 @@
 import { useState } from "react";
 import yellowArrow from "../../assets/ItemListPage/yellow-arrow.png";
 import uproarThumbnail from "../../assets/DummyItems/uproarThumbnail.png";
+import { useNavigate } from "react-router-dom";
+import AppRoutes from "../../helpers/routes";
 
 interface KeyStatsItem {
   image: string;
@@ -27,6 +29,8 @@ const dummyItems: KeyStatsItem[] = [
 ];
 
 export function KeyStatsPage() {
+  const navigate = useNavigate();
+
   return (
     <div className="keyStats">
       <div className="keyStats-stat">
@@ -39,26 +43,41 @@ export function KeyStatsPage() {
       </div>
       <div className="keyStats-stat">
         <p className="keyStats-stat-text">Net eranings this month</p>
-        <p className="keyStats-stat-text" style={{marginRight: "150px"}}>~n</p>
+        <p className="keyStats-stat-text" style={{ marginRight: "150px" }}>
+          ~n
+        </p>
       </div>
       <div className="keyStats-stat">
         <p className="keyStats-stat-text">Average order value</p>
-        <p className="keyStats-stat-text" style={{marginRight: "150px"}}>~n</p>
+        <p className="keyStats-stat-text" style={{ marginRight: "150px" }}>
+          ~n
+        </p>
       </div>
       <div className="keyStats-stat">
         <p className="keyStats-stat-text">Items sold this month</p>
-        <p className="keyStats-stat-text" style={{marginRight: "150px"}}>~n</p>
+        <p className="keyStats-stat-text" style={{ marginRight: "150px" }}>
+          ~n
+        </p>
       </div>
       <div className="keyStats-stat">
         <p className="keyStats-stat-text">
           Total number of customers this month
         </p>
-        <p className="keyStats-stat-text" style={{marginRight: "150px"}}>~n</p>
+        <p className="keyStats-stat-text" style={{ marginRight: "150px" }}>
+          ~n
+        </p>
       </div>
       <div className="keyStats-stat">
         <p className="keyStats-stat-text">Total number of discounts</p>
-        <p className="keyStats-stat-text" style={{marginRight: "150px"}}>~n</p>
-        <p className="keyStats-stat-link">Manage discounts</p>
+        <p className="keyStats-stat-text" style={{ marginRight: "150px" }}>
+          ~n
+        </p>
+        <p
+          className="keyStats-stat-link"
+          onClick={() => navigate(AppRoutes.discountGenerationRoute)}
+        >
+          Manage discounts
+        </p>
       </div>
     </div>
   );
