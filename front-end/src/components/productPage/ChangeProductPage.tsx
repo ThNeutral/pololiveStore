@@ -1,11 +1,5 @@
 import { useState } from "react";
 import suiseiProduct from "../../assets/DummyItems/suiseiProduct.png";
-import facebook from "../../assets/ItemPage/facebook.svg";
-import twitter from "../../assets/ItemPage/twitter.svg";
-import instagram from "../../assets/ItemPage/instagram.svg";
-import addToCartIcon from "../../assets/ItemPage/add-to-cart.png";
-import { QuantitySelector } from "../common/QuantitySelector";
-import { HistoryGrid } from "../common/HistoryGrid";
 
 interface ProductType {
   image: string;
@@ -31,7 +25,6 @@ const dummyProduct: ProductType = {
 };
 
 export function СhangeProductPage() {
-  const [quantity, setQuantity] = useState(1);
   const [hasChanged, setHasChanged] = useState(false);
 
   return (
